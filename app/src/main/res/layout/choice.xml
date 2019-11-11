@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/spring"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="484dp"
+            android:background="@drawable/round_button"
+            android:text="Button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/summer"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="27dp"
+            android:background="@drawable/round_button"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/christmas" />
+
+        <Button
+            android:id="@+id/christmas"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_marginStart="171dp"
+            android:layout_marginTop="215dp"
+            android:layout_marginEnd="177dp"
+            android:background="@drawable/round_button"
+            android:text="Button"
+            app:layout_constraintBottom_toTopOf="@+id/summer"
+            app:layout_constraintEnd_toEndOf="@+id/summer"
+            app:layout_constraintHorizontal_bias="0.412"
+            app:layout_constraintStart_toStartOf="@+id/spring"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
