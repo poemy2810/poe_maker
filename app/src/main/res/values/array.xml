@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name = "list_random_summerView">
+    <item>@drawable/summer1</item>
+    <item>@drawable/summer2</item>
+    <item>@drawable/summer3</item>
+    <item>@drawable/summer4</item>
+    <item>@drawable/summer5</item>
+
+    </array>
+</resources>
