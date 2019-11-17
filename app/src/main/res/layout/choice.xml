@@ -10,7 +10,7 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/spring"
+            android:id="@+id/summerButton"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_marginStart="16dp"
@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/summer"
+            android:id="@+id/christmasButton"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_marginEnd="16dp"
@@ -34,7 +34,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/christmas"
+            android:id="@+id/springButton"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_marginStart="171dp"
@@ -43,10 +43,10 @@
             android:background="@drawable/round_button"
             android:text="Spring"
             android:textSize="36sp"
-            app:layout_constraintBottom_toTopOf="@+id/summer"
-            app:layout_constraintEnd_toEndOf="@+id/summer"
+            app:layout_constraintBottom_toTopOf="@+id/christmasButton"
+            app:layout_constraintEnd_toEndOf="@+id/christmasButton"
             app:layout_constraintHorizontal_bias="0.485"
-            app:layout_constraintStart_toStartOf="@+id/spring"
+            app:layout_constraintStart_toStartOf="@+id/summerButton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
