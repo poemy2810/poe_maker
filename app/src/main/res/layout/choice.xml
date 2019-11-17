@@ -14,23 +14,29 @@
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="281dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/round_button"
             android:text="SUMMER"
             android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/christmasButton"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/christmasButton"
             android:layout_width="170dp"
             android:layout_height="170dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/round_button"
             android:text="CHRISTMAS"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/summerButton"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
@@ -49,5 +55,19 @@
             app:layout_constraintStart_toStartOf="@+id/summerButton"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="284dp"
+            android:layout_height="86dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:text="キャンプ時期を               選んでください"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/springButton"
+            app:layout_constraintVertical_bias="0.728" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

@@ -13,11 +13,8 @@ class MainActivity : AppCompatActivity() {
     val summerList = arrayOf("海", "かき氷", "夏休み", "暑い", "Tシャツ")
     val summerList2 = arrayOf("すいか", "そうめん", "アイス","りんご飴", "焼きトウモロコシ")
     val summerList3 = arrayOf("祭り", "花火", "浴衣", "射的", "盆踊り", "エアコン")
-    /*val springList = arrayOf("桜", "卒業", "団子", "出会い", "入学")
-    val christmasList = arrayOf("クリスマス", "冬", "雪", "寒さ", "お正月")
-
     val summerViewList = arrayOf("summer1", "summer2", "summer3", "summer4", "summer5")
-*/
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,11 +33,24 @@ class MainActivity : AppCompatActivity() {
             textView3.text = summerList3[randomnum3]
 
 
-            
-            //val summerViewRandom = Random.nextInt(summerViewList.size)
 
+            val typedArray= resources.obtainTypedArray(R.array.list_random_summerView)
+            // array.xmlから配列として取得
 
+            val rand = Math.floor(Math.random() * typedArray.length()).toInt()
+            //0~画像の枚数からランダムに番号を取得
 
+            val drawable = typedArray.getDrawable(rand)
+            //配列からその番号の画像を取得
+
+            ViewImage.setImageDrawable(drawable) //Viewに画像をsetする
+
+        }
+
+        returnButton.setOnClickListener {
+
+            val intent2: Intent = Intent(this, choiceActivity::class.java)
+            startActivity(intent2)
 
         }
 

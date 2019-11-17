@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".christmasActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -43,7 +43,7 @@
         android:layout_height="65dp"
         android:layout_marginStart="17dp"
         android:layout_marginBottom="84dp"
-        android:background="@color/colorPrimary"
+        android:background="#E91E63"
         android:text="tap!"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,7 +57,7 @@
     <ImageView
         android:id="@+id/ViewImage"
         android:layout_width="324dp"
-        android:layout_height="146dp"
+        android:layout_height="131dp"
         android:layout_marginTop="52dp"
         android:layout_marginBottom="405dp"
         app:layout_constraintBottom_toTopOf="@+id/returnButton"
@@ -80,4 +80,6 @@
         app:layout_constraintStart_toEndOf="@+id/appdataButton"
         app:layout_constraintTop_toBottomOf="@id/textView3"
         app:layout_constraintVertical_bias="0.897" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
