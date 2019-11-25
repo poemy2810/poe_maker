@@ -6,78 +6,126 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="268dp"
-        android:text="ヒント①"
-        android:textSize="36sp"
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="256dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginBottom="75dp"
+        android:hint="文字を入力"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.283"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:text="ヒント②"
-        android:textSize="36sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:text="ヒント③"
-        android:textSize="36sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView2" />
-
     <Button
-        android:id="@+id/appdataButton"
-        android:layout_width="130dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginBottom="84dp"
-        android:background="@color/colorPrimary"
-        android:text="tap!"
-        android:textSize="24sp"
+        android:id="@+id/enterButton"
+        android:layout_width="77dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="152dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/returnButton"
-        app:layout_constraintHorizontal_bias="0.263"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textView3"
-        app:layout_constraintVertical_bias="0.892" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editText" />
+
+    <Button
+        android:id="@+id/whenButton"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="15dp"
+        android:text="いつ"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/whoImage"
+        app:layout_constraintVertical_bias="0.521" />
+
+    <Button
+        android:id="@+id/keywordButton"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="15dp"
+        android:text="key"
+        app:layout_constraintBottom_toTopOf="@+id/enterButton"
+        app:layout_constraintStart_toStartOf="@+id/enterButton"
+        app:layout_constraintTop_toBottomOf="@+id/keywordImage" />
 
     <ImageView
-        android:id="@+id/ViewImage"
-        android:layout_width="324dp"
-        android:layout_height="146dp"
+        android:id="@+id/keywordImage"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/whoImage"
+        app:layout_constraintStart_toEndOf="@+id/whoImage"
+        app:layout_constraintTop_toBottomOf="@+id/whenImage"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <ImageView
+        android:id="@+id/whenImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="52dp"
-        android:layout_marginBottom="405dp"
-        app:layout_constraintBottom_toTopOf="@+id/returnButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/whereImage"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/summer1" />
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/whoImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whenImage"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/whereImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/keywordImage"
+        app:layout_constraintEnd_toEndOf="@+id/keywordImage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/keywordImage"
+        app:layout_constraintTop_toTopOf="@+id/whenImage"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/ic_launcher" />
 
     <Button
-        android:id="@+id/returnButton"
-        android:layout_width="130dp"
-        android:layout_height="65dp"
-        android:layout_marginEnd="14dp"
-        android:layout_marginBottom="85dp"
-        android:background="#8BC34A"
-        android:text="return"
-        android:textSize="24sp"
+        android:id="@+id/whereButton"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="15dp"
+        android:text="どこで"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintStart_toEndOf="@+id/whenButton"
+        app:layout_constraintTop_toBottomOf="@+id/keywordImage" />
+
+    <Button
+        android:id="@+id/whoButton"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="15dp"
+        android:text="だれに"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintStart_toEndOf="@+id/whereButton"
+        app:layout_constraintTop_toBottomOf="@+id/keywordImage" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:text="保存"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/appdataButton"
-        app:layout_constraintTop_toBottomOf="@id/textView3"
-        app:layout_constraintVertical_bias="0.897" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

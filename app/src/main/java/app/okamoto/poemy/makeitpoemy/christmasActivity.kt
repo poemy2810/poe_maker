@@ -18,7 +18,7 @@ class christmasActivity : AppCompatActivity() {
 
 
 
-        appdataButton.setOnClickListener {
+        /*appdataButton.setOnClickListener {
 
             val randomnum = Random.nextInt(christmasList.size)
             textView.text = christmasList[randomnum]
@@ -41,6 +41,8 @@ class christmasActivity : AppCompatActivity() {
             startActivity(intent2)
 
         }
+        */
+
 
     }
 }

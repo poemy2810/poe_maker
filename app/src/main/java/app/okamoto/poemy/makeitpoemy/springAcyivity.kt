@@ -18,7 +18,7 @@ class springAcyivity : AppCompatActivity() {
         setContentView(R.layout.activity_spring)
 
 
-            appdataButton.setOnClickListener {
+            /*appdataButton.setOnClickListener {
 
                 val randomnum = Random.nextInt(springList.size)
                 textView.text = springList[randomnum]
@@ -40,7 +40,7 @@ class springAcyivity : AppCompatActivity() {
             val intent2: Intent = Intent(this, choiceActivity::class.java)
             startActivity(intent2)
 
-        }
+        }*/
 
 
         }

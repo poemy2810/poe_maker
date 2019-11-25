@@ -4,16 +4,36 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.choice.*
 import kotlin.random.Random
 
 
 class MainActivity : AppCompatActivity() {
 
-    val summerList = arrayOf("海", "かき氷", "夏休み", "暑い", "Tシャツ")
-    val summerList2 = arrayOf("すいか", "そうめん", "アイス","りんご飴", "焼きトウモロコシ")
-    val summerList3 = arrayOf("祭り", "花火", "浴衣", "射的", "盆踊り", "エアコン")
-    val summerViewList = arrayOf("summer1", "summer2", "summer3", "summer4", "summer5")
+    val whenList = arrayOf("朝", "昼", "夕方", "夜")
+    val whereList = arrayOf("学校", "海", "山", "遊園地", "夏祭り", "花火大会")
+    val whoList = arrayOf("家族", "友人", "親友", "好きな人", "ペット")
+    val keywordList = arrayOf(
+        arrayOf("チョーク", "机", "あ"),
+        arrayOf("あ","い","u")
+    )
+
+
+    val whenImageList = arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3,R.drawable.summer4, R.drawable.summer5)
+    val whoImageList = arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3, R.drawable.summer4, R.drawable.summer5)
+    val whereImageList = arrayOf(R.drawable.summer1,R.drawable.summer2,R.drawable.summer3,R.drawable.summer4, R.drawable.summer4)
+    val keywordImageList = arrayOf(
+        arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3,R.drawable.summer4, R.drawable.summer5),
+        arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3,R.drawable.summer4, R.drawable.summer5),
+        arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3,R.drawable.summer4, R.drawable.summer5),
+        arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3,R.drawable.summer4, R.drawable.summer5),
+        arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3,R.drawable.summer4, R.drawable.summer5)
+        )
+
+
+    var whenIndex = 0
+    var whoIndex = 0
+    var whereIndex = 0
+    var keywordIndex = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,20 +41,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-        appdataButton.setOnClickListener {
+        /*whenButton.setOnClickListener {
 
-            val randomnum = Random.nextInt(summerList.size)
-            textView.text = summerList[randomnum]
+            val randomnum = Random.nextInt(whenList.size)
+            whenView.text = whenList[randomnum]
 
-            val randomnum2 = Random.nextInt(summerList2.size)
-            textView2.text = summerList2[randomnum2]
+            val randomnum2 = Random.nextInt(whereList.size)
+            textView2.text = whereList[randomnum2]
 
-            val randomnum3 = Random.nextInt(summerList3.size)
-            textView3.text = summerList3[randomnum3]
+            val randomnum3 = Random.nextInt(whoList.size)
+            textView3.text = whoList[randomnum3]
 
 
-
-            val typedArray= resources.obtainTypedArray(R.array.list_random_summerView)
+            val typedArray = resources.obtainTypedArray(R.array.list_when)
             // array.xmlから配列として取得
 
             val rand = Math.floor(Math.random() * typedArray.length()).toInt()
@@ -43,18 +62,46 @@ class MainActivity : AppCompatActivity() {
             val drawable = typedArray.getDrawable(rand)
             //配列からその番号の画像を取得
 
-            ViewImage.setImageDrawable(drawable) //Viewに画像をsetする
+            viewImage.setImageDrawable(drawable) //Viewに画像をsetする
 
         }
+        */
 
-        returnButton.setOnClickListener {
 
+        whenButton.setOnClickListener {
+             whenIndex = Random.nextInt(whenImageList.size)
+             whenImage.setImageResource(whenImageList[whenIndex])
+        }
+
+        whoButton.setOnClickListener {
+            whoIndex = Random.nextInt(whoImageList.size)
+            whoImage.setImageResource(whoImageList[whoIndex])
+        }
+
+        whereButton.setOnClickListener {
+            whereIndex = Random.nextInt(whereImageList.size)
+            whereImage.setImageResource(whereImageList[whereIndex])
+        }
+
+        keywordButton.setOnClickListener {
+            keywordIndex = Random.nextInt(keywordImageList[whereIndex].size)
+            keywordImage.setImageResource(keywordImageList[whereIndex][keywordIndex])
+        }
+
+
+
+        enterButton.setOnClickListener {
+            editText.text = editText.text
+        }
+
+
+
+        /*returnButton.setOnClickListener {
             val intent2: Intent = Intent(this, choiceActivity::class.java)
             startActivity(intent2)
-
         }
 
-
+         */
 
 
     }
