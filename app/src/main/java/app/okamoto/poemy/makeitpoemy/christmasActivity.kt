@@ -17,6 +17,49 @@ class christmasActivity : AppCompatActivity() {
         setContentView(R.layout.activity_christmas)
 
 
+        val whenImageList = arrayOf(R.drawable.morning, R.drawable.noon, R.drawable.evening,R.drawable.night)
+        val whoImageList = arrayOf(R.drawable.friend, R.drawable.couple, R.drawable.pet, R.drawable.parents,R.drawable.sea)
+        val whereImageList = arrayOf(R.drawable.camp,R.drawable.festival,R.drawable.grandmother,R.drawable.sea)
+        val keywordImageList = arrayOf(
+            arrayOf(R.drawable.bbq, R.drawable.candle, R.drawable.shavedice,R.drawable.star),
+            arrayOf(R.drawable.mask, R.drawable.ringoame, R.drawable.shateki,R.drawable.yukata),
+            arrayOf(R.drawable.furin, R.drawable.ocha, R.drawable.trump,R.drawable.watermelon),
+            arrayOf(R.drawable.parasol, R.drawable.ukiwa, R.drawable.watermelon2)
+
+        )
+
+
+        var whenIndex = 0
+        var whoIndex = 0
+        var whereIndex = 0
+        var keywordIndex = 0
+
+        whenButton.setOnClickListener {
+            whenIndex = Random.nextInt(whenImageList.size)
+            whenImage.setImageResource(whenImageList[whenIndex])
+        }
+
+        whoButton.setOnClickListener {
+            whoIndex = Random.nextInt(whoImageList.size)
+            whoImage.setImageResource(whoImageList[whoIndex])
+        }
+
+        whereButton.setOnClickListener {
+            whereIndex = Random.nextInt(whereImageList.size)
+            whereImage.setImageResource(whereImageList[whereIndex])
+        }
+
+        keywordButton.setOnClickListener {
+            keywordIndex = Random.nextInt(keywordImageList[whereIndex].size)
+            keywordImage.setImageResource(keywordImageList[whereIndex][keywordIndex])
+        }
+
+
+
+
+
+
+
 
         /*appdataButton.setOnClickListener {
 
