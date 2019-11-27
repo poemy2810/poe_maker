@@ -18,15 +18,15 @@ class MainActivity : AppCompatActivity() {
     )
 
 
-    val whenImageList = arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3,R.drawable.summer4, R.drawable.summer5)
-    val whoImageList = arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3, R.drawable.summer4, R.drawable.summer5)
-    val whereImageList = arrayOf(R.drawable.summer1,R.drawable.summer2,R.drawable.summer3,R.drawable.summer4, R.drawable.summer4)
+    val whenImageList = arrayOf(R.drawable.morning, R.drawable.noon, R.drawable.evening,R.drawable.night)
+    val whoImageList = arrayOf(R.drawable.friend, R.drawable.couple, R.drawable.pet, R.drawable.parents,R.drawable.sea)
+    val whereImageList = arrayOf(R.drawable.camp,R.drawable.festival,R.drawable.grandmother,R.drawable.sea)
     val keywordImageList = arrayOf(
-        arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3,R.drawable.summer4, R.drawable.summer5),
-        arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3,R.drawable.summer4, R.drawable.summer5),
-        arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3,R.drawable.summer4, R.drawable.summer5),
-        arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3,R.drawable.summer4, R.drawable.summer5),
-        arrayOf(R.drawable.summer1, R.drawable.summer2, R.drawable.summer3,R.drawable.summer4, R.drawable.summer5)
+        arrayOf(R.drawable.bbq, R.drawable.candle, R.drawable.shavedice,R.drawable.star),
+        arrayOf(R.drawable.mask, R.drawable.ringoame, R.drawable.shateki,R.drawable.yukata),
+        arrayOf(R.drawable.furin, R.drawable.ocha, R.drawable.trump,R.drawable.watermelon),
+        arrayOf(R.drawable.parasol, R.drawable.ukiwa, R.drawable.watermelon2)
+
         )
 
 
