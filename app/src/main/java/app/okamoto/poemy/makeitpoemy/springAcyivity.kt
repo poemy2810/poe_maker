@@ -18,7 +18,7 @@ class springAcyivity : AppCompatActivity() {
         setContentView(R.layout.activity_spring)
 
         val whenImageList2 = arrayOf(R.drawable.morning, R.drawable.noon, R.drawable.evening,R.drawable.night)
-        val whoImageList2 = arrayOf(R.drawable.friend, R.drawable.couple, R.drawable.pet, R.drawable.parents,R.drawable.sea)
+        val whoImageList2 = arrayOf(R.drawable.friend, R.drawable.couple, R.drawable.pet, R.drawable.parents)
         val whereImageList2 = arrayOf(R.drawable.hanami,R.drawable.kyoto,R.drawable.school)
         val keywordImageList2 = arrayOf(
             arrayOf(R.drawable.alchol, R.drawable.dango, R.drawable.kaidashi),

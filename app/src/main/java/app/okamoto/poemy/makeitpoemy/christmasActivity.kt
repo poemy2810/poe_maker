@@ -18,7 +18,7 @@ class christmasActivity : AppCompatActivity() {
 
 
         val whenImageList3 = arrayOf(R.drawable.morning, R.drawable.noon, R.drawable.evening,R.drawable.night)
-        val whoImageList3 = arrayOf(R.drawable.friend, R.drawable.couple, R.drawable.pet, R.drawable.parents,R.drawable.sea)
+        val whoImageList3 = arrayOf(R.drawable.friend, R.drawable.couple, R.drawable.pet, R.drawable.parents)
         val whereImageList3 = arrayOf(R.drawable.house,R.drawable.road,R.drawable.snow,R.drawable.station)
         val keywordImageList3 = arrayOf(
             arrayOf(R.drawable.cake, R.drawable.cocoa, R.drawable.present,R.drawable.santa,R.drawable.tree),
