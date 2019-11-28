@@ -17,6 +17,42 @@ class springAcyivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spring)
 
+        val whenImageList2 = arrayOf(R.drawable.morning, R.drawable.noon, R.drawable.evening,R.drawable.night)
+        val whoImageList2 = arrayOf(R.drawable.friend, R.drawable.couple, R.drawable.pet, R.drawable.parents,R.drawable.sea)
+        val whereImageList2 = arrayOf(R.drawable.hanami,R.drawable.kyoto,R.drawable.school)
+        val keywordImageList2 = arrayOf(
+            arrayOf(R.drawable.alchol, R.drawable.dango, R.drawable.kaidashi),
+            arrayOf(R.drawable.kamogawa, R.drawable.kiyomizudera, R.drawable.shinkansen),
+            arrayOf(R.drawable.graduation, R.drawable.randoseru, R.drawable.teacher)
+
+
+        )
+
+
+        var whenIndex2 = 0
+        var whoIndex2 = 0
+        var whereIndex2 = 0
+        var keywordIndex2 = 0
+
+        whenButton.setOnClickListener {
+            whenIndex2 = Random.nextInt(whenImageList2.size)
+            whenImage.setImageResource(whenImageList2[whenIndex2])
+        }
+
+        whoButton.setOnClickListener {
+            whoIndex2 = Random.nextInt(whoImageList2.size)
+            whoImage.setImageResource(whoImageList2[whoIndex2])
+        }
+
+        whereButton.setOnClickListener {
+            whereIndex2 = Random.nextInt(whereImageList2.size)
+            whereImage.setImageResource(whereImageList2[whereIndex2])
+        }
+
+        keywordButton.setOnClickListener {
+            keywordIndex2 = Random.nextInt(keywordImageList2[whereIndex2].size)
+            keywordImage.setImageResource(keywordImageList2[whereIndex2][keywordIndex2])
+        }
 
             /*appdataButton.setOnClickListener {
 

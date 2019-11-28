@@ -17,41 +17,41 @@ class christmasActivity : AppCompatActivity() {
         setContentView(R.layout.activity_christmas)
 
 
-        val whenImageList = arrayOf(R.drawable.morning, R.drawable.noon, R.drawable.evening,R.drawable.night)
-        val whoImageList = arrayOf(R.drawable.friend, R.drawable.couple, R.drawable.pet, R.drawable.parents,R.drawable.sea)
-        val whereImageList = arrayOf(R.drawable.camp,R.drawable.festival,R.drawable.grandmother,R.drawable.sea)
-        val keywordImageList = arrayOf(
-            arrayOf(R.drawable.bbq, R.drawable.candle, R.drawable.shavedice,R.drawable.star),
-            arrayOf(R.drawable.mask, R.drawable.ringoame, R.drawable.shateki,R.drawable.yukata),
-            arrayOf(R.drawable.furin, R.drawable.ocha, R.drawable.trump,R.drawable.watermelon),
-            arrayOf(R.drawable.parasol, R.drawable.ukiwa, R.drawable.watermelon2)
+        val whenImageList3 = arrayOf(R.drawable.morning, R.drawable.noon, R.drawable.evening,R.drawable.night)
+        val whoImageList3 = arrayOf(R.drawable.friend, R.drawable.couple, R.drawable.pet, R.drawable.parents,R.drawable.sea)
+        val whereImageList3 = arrayOf(R.drawable.house,R.drawable.road,R.drawable.snow,R.drawable.station)
+        val keywordImageList3 = arrayOf(
+            arrayOf(R.drawable.cake, R.drawable.cocoa, R.drawable.present,R.drawable.santa,R.drawable.tree),
+            arrayOf(R.drawable.jihanki, R.drawable.mitton, R.drawable.nitcap,R.drawable.roadtree),
+            arrayOf(R.drawable.ski, R.drawable.slider, R.drawable.snowboard,R.drawable.snowman),
+            arrayOf(R.drawable.clock, R.drawable.crowded, R.drawable.information,R.drawable.muffler)
 
         )
 
 
-        var whenIndex = 0
-        var whoIndex = 0
-        var whereIndex = 0
-        var keywordIndex = 0
+        var whenIndex3 = 0
+        var whoIndex3 = 0
+        var whereIndex3 = 0
+        var keywordIndex3 = 0
 
         whenButton.setOnClickListener {
-            whenIndex = Random.nextInt(whenImageList.size)
-            whenImage.setImageResource(whenImageList[whenIndex])
+            whenIndex3 = Random.nextInt(whenImageList3.size)
+            whenImage.setImageResource(whenImageList3[whenIndex3])
         }
 
         whoButton.setOnClickListener {
-            whoIndex = Random.nextInt(whoImageList.size)
-            whoImage.setImageResource(whoImageList[whoIndex])
+            whoIndex3 = Random.nextInt(whoImageList3.size)
+            whoImage.setImageResource(whoImageList3[whoIndex3])
         }
 
         whereButton.setOnClickListener {
-            whereIndex = Random.nextInt(whereImageList.size)
-            whereImage.setImageResource(whereImageList[whereIndex])
+            whereIndex3 = Random.nextInt(whereImageList3.size)
+            whereImage.setImageResource(whereImageList3[whereIndex3])
         }
 
         keywordButton.setOnClickListener {
-            keywordIndex = Random.nextInt(keywordImageList[whereIndex].size)
-            keywordImage.setImageResource(keywordImageList[whereIndex][keywordIndex])
+            keywordIndex3 = Random.nextInt(keywordImageList3[whereIndex3].size)
+            keywordImage.setImageResource(keywordImageList3[whereIndex3][keywordIndex3])
         }
 
 
