@@ -3,7 +3,9 @@ package app.okamoto.poemy.makeitpoemy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import io.realm.Realm
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 import kotlin.random.Random
 
 class springAcyivity : AppCompatActivity() {
@@ -13,13 +15,25 @@ class springAcyivity : AppCompatActivity() {
     val springList3 = arrayOf("学校", "屋上", "入学式", "机", "黒板", "チョーク")
 
 
+    var whenIndex2 = 0
+    var whoIndex2 = 0
+    var whereIndex2 = 0
+    var keywordIndex2 = 0
+
+
+    private val realm: Realm by lazy {
+        Realm.getDefaultInstance()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spring)
 
-        val whenImageList2 = arrayOf(R.drawable.morning, R.drawable.noon, R.drawable.evening,R.drawable.night)
-        val whoImageList2 = arrayOf(R.drawable.friend, R.drawable.couple, R.drawable.pet, R.drawable.parents)
-        val whereImageList2 = arrayOf(R.drawable.hanami,R.drawable.kyoto,R.drawable.school)
+        val whenImageList2 =
+            arrayOf(R.drawable.morning, R.drawable.noon, R.drawable.evening, R.drawable.night)
+        val whoImageList2 =
+            arrayOf(R.drawable.friend, R.drawable.couple, R.drawable.pet, R.drawable.parents)
+        val whereImageList2 = arrayOf(R.drawable.hanami, R.drawable.kyoto, R.drawable.school)
         val keywordImageList2 = arrayOf(
             arrayOf(R.drawable.alchol, R.drawable.dango, R.drawable.kaidashi),
             arrayOf(R.drawable.kamogawa, R.drawable.kiyomizudera, R.drawable.shinkansen),
@@ -29,10 +43,6 @@ class springAcyivity : AppCompatActivity() {
         )
 
 
-        var whenIndex2 = 0
-        var whoIndex2 = 0
-        var whereIndex2 = 0
-        var keywordIndex2 = 0
 
         whenButton.setOnClickListener {
             whenIndex2 = Random.nextInt(whenImageList2.size)
@@ -54,7 +64,12 @@ class springAcyivity : AppCompatActivity() {
             keywordImage.setImageResource(keywordImageList2[whereIndex2][keywordIndex2])
         }
 
-            /*appdataButton.setOnClickListener {
+        saveButton.setOnClickListener {
+            //editText.text = editText.text
+            create("spring: ", editText.text.toString())
+        }
+
+        /*appdataButton.setOnClickListener {
 
                 val randomnum = Random.nextInt(springList.size)
                 textView.text = springList[randomnum]
@@ -78,7 +93,17 @@ class springAcyivity : AppCompatActivity() {
 
         }*/
 
-
-        }
     }
+
+        fun create(season: String, content: String) {
+            realm.executeTransaction {
+                val poem = it.createObject(Poem::class.java, UUID.randomUUID().toString())
+                poem.season = season
+                poem.content = content
+            }
+        }
+
+
+
+}
 

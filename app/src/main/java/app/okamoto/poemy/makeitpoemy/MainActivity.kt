@@ -1,10 +1,10 @@
 package app.okamoto.poemy.makeitpoemy
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import io.realm.Realm
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.choice.*
+import java.util.*
 import kotlin.random.Random
 
 
@@ -35,6 +35,12 @@ class MainActivity : AppCompatActivity() {
     var whoIndex = 0
     var whereIndex = 0
     var keywordIndex = 0
+
+
+    private val realm: Realm by lazy {
+        Realm.getDefaultInstance()
+    }
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,10 +97,15 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        enterButton.setOnClickListener {
-            editText.text = editText.text
+        saveButton.setOnClickListener {
+            //editText.text = editText.text
+            create( "summer: ", editText.text.toString())
         }
 
+
+        editText.setOnClickListener {
+            editText.text = editText.text
+        }
 
 
 
@@ -105,8 +116,23 @@ class MainActivity : AppCompatActivity() {
 
          */
 
-
     }
+
+
+
+
+
+
+
+    fun create(season: String, content: String) {
+        realm.executeTransaction {
+            val poem = it.createObject(Poem::class.java, UUID.randomUUID().toString())
+            poem.season = season
+            poem.content = content
+        }
+    }
+
+
 }
 
 

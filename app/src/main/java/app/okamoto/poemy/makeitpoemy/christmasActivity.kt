@@ -3,7 +3,9 @@ package app.okamoto.poemy.makeitpoemy
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import io.realm.Realm
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 import kotlin.random.Random
 
 class christmasActivity : AppCompatActivity() {
@@ -11,6 +13,18 @@ class christmasActivity : AppCompatActivity() {
     val christmasList = arrayOf("クリスマス", "サンタ", "クリスマスツリー", "ドイツ", "フィンランド")
     val christmasList2 = arrayOf("ジンジャーブレッド", "シュトーレン", "クリスマスケーキ", "七面鳥", "チキン")
     val christmasList3 = arrayOf("雪", "雪だるま", "手袋", "マフラー", "寒さ", "暖房")
+
+    var whenIndex3 = 0
+    var whoIndex3 = 0
+    var whereIndex3 = 0
+    var keywordIndex3 = 0
+
+
+    private val realm: Realm by lazy {
+        Realm.getDefaultInstance()
+    }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,10 +43,7 @@ class christmasActivity : AppCompatActivity() {
         )
 
 
-        var whenIndex3 = 0
-        var whoIndex3 = 0
-        var whereIndex3 = 0
-        var keywordIndex3 = 0
+
 
         whenButton.setOnClickListener {
             whenIndex3 = Random.nextInt(whenImageList3.size)
@@ -57,6 +68,10 @@ class christmasActivity : AppCompatActivity() {
 
 
 
+        saveButton.setOnClickListener {
+            //editText.text = editText.text
+            create( "christmas: ", editText.text.toString())
+        }
 
 
 
@@ -85,7 +100,13 @@ class christmasActivity : AppCompatActivity() {
 
         }
         */
+    }
 
-
+    fun create(season: String, content: String) {
+        realm.executeTransaction {
+            val poem = it.createObject(Poem::class.java, UUID.randomUUID().toString())
+            poem.season = season
+            poem.content = content
+        }
     }
 }

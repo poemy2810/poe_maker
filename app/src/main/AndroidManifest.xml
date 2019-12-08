@@ -3,6 +3,7 @@
     package="app.okamoto.poemy.makeitpoemy">
 
     <application
+        android:name=".MakeItPoemyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
